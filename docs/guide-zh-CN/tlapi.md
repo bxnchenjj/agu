@@ -1,11 +1,10 @@
-提问列表
+1、提问列表
 GET：`http://tl.6hmall.cn/api/v1/ask/questions`
 入参说明
 
 | 参数名        | 类型   |  说明  |备注|
 | --------   | -----:  | :----:  |:----: |
 | page      | string   |   要读取的分页码     |页码 |
-
 返回
 
 ```
@@ -41,7 +40,7 @@ GET：`http://tl.6hmall.cn/api/v1/ask/questions`
 ```
 
 
-提问
+2、提问
 POST：`http://tl.6hmall.cn/api/v1/ask/questions/create`
 入参说明
 
@@ -65,7 +64,7 @@ POST：`http://tl.6hmall.cn/api/v1/ask/questions/create`
 }
 ```
 
-查看提问详情
+3、查看提问详情
 GET：`http://tl.6hmall.cn/api/v1/ask/questions/2`
 入参说明
 
@@ -129,7 +128,7 @@ GET：`http://tl.6hmall.cn/api/v1/ask/questions/2`
 }
 ```
 
-回答问题
+4、回答问题
 POST：`http://tl.6hmall.cn/api/v1/ask/answers/store`
 入参说明
 
@@ -150,7 +149,7 @@ POST：`http://tl.6hmall.cn/api/v1/ask/answers/store`
 
 ```
 
-修改头像和昵称
+5、修改头像和昵称
 POST：`http://tl.6hmall.cn/api/v1/site/up-userinfo`
 入参说明
 
