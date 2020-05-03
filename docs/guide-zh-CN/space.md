@@ -14,6 +14,16 @@
 
 #### 认证查看
 
+（Get）:
+
+```
+/api/profile/authentication
+```
+
+
+
+
+
 #### 提交认证
 
 （Post）:
@@ -25,7 +35,7 @@
 参数名 | 参数类型 | 必填 | 默认 | 说明 | 备注
 ---|---|---|---|---|---
 title | string | 是 | 无 |  身份职业| 
-description | string | 是 | 自我介绍 | 
+description | string | 是 | 无 | 自我介绍
 skill | string | 是 | 无 | 认证领域 | 
 skill_img | string | 是 | 无 | 专业性证明 | 认证的图片URL，需先上传
 
