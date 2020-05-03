@@ -1,3 +1,3 @@
 # agu
 agutest
-[个人中心](site.md)
+[个人中心](docs/guide-zh-CN/tlapi.md)
