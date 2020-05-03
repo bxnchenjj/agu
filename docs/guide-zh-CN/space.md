@@ -20,9 +20,31 @@
 /api/profile/authentication
 ```
 
+返回
 
+```
+{
+    "code": 200,
+    "message": "创建成功",
+    "data": {
+        "id": 1,
+        "merchant_id": 0,
+        "category_id": 1,
+        "title": "asdf",
+        "description": "asf",
+        "skill": "塔罗的",
+        "skill_image": "http://tl.6hmall.cn/attachment/images/2020/05/01/image_1588310505_J6E6b60u.jpg",
+        "status": 2,
+        "failed_reason": "111",
+        "position": 7,
+        "ip": "183.130.26.183",
+        "created_at": 1588399140,
+        "updated_at": 1588491244
+    },
+    "timestamp": 1588491456
+}
 
-
+```
 
 #### 提交认证
 
