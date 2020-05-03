@@ -12,14 +12,21 @@ touTiao | 头条小程序
 
 > 注意：如果是商户 api 的需要安装商户插件，并创建用户信息进行登录
 
-## 登录重置
+## 登录相关
+
 
 目录
 
-- 登录
+- 通过用户名登录
+- 通过手机号验证码快捷登录
 - 重置令牌
+- 修改个人资料
+- 注册
+- 重置密码
+- 退出登录
 
-### 登录
+
+### 通过用户名登录
 
 请求地址(Post)
 
@@ -79,7 +86,66 @@ password | string| 是 | 无 | 密码 |
     }
 }
 ```
+### 通过手机号验证码快捷登录
 
+请求地址(Post)
+
+```
+/v1/site/mobile-login
+```
+
+参数
+
+参数名 | 参数类型 | 必填 | 默认 | 说明 | 备注
+---|---|---|---|---|---
+mibile | string| 是 | 无 | 手机号 |
+code | string| 是 | 无 | 短信验证码 | 
+`group` | string| 是 | 无 | 组别 | 
+
+返回
+
+```
+{
+    "code": 200,
+    "message": "OK",
+    "data": {
+        "refresh_token": "1V1XLG8DQkROK6g-Rh5k17hZuZHQVZB9_1527339048",
+        "access_token": "neRlaCJcbMQHgPmZqRjqYgVBfFZUe7lm_1527339048",
+        "expiration_time": 172800,
+        "member": {
+            "id": 1,
+            "username": "admin",
+            "type": 1,
+            "nickname": "简言",
+            "realname": null,
+            "head_portrait": null,
+            "sex": 1,
+            "qq": null,
+            "email": "1@qq.com",
+            "birthday": null,
+            "user_money": "0.00",
+            "accumulate_money": "0.00",
+            "frozen_money": "0.00",
+            "user_integral": 0,
+            "address_id": "0",
+            "visit_count": 8,
+            "home_phone": null,
+            "mobile": null,
+            "role": 10,
+            "last_time": 1527339048,
+            "last_ip": "127.0.0.1",
+            "provinces": 0,
+            "city": 0,
+            "area": 0,
+            "allowance": 2,
+            "allowance_updated_at": 1527339048,
+            "status": 10,
+            "append": 1511169880,
+            "updated": 1527339048
+        }
+    }
+}
+```
 ### 重置令牌
 
 请求地址(Post)
