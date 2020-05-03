@@ -5,6 +5,7 @@ GET：`http://tl.6hmall.cn/api/v1/ask/questions`
 | 参数名        | 类型   |  说明  |备注|
 | --------   | -----:  | :----:  |:----: |
 | page      | string   |   要读取的分页码     |页码 |
+
 返回
 
 ```
