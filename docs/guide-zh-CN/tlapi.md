@@ -1,3 +1,4 @@
+### 问答公用
 目录
 
 - 提问列表(公用)
@@ -50,8 +51,10 @@ GET：`http://tl.6hmall.cn/api/v1/ask/questions`
 ```
 
 
-2、发起提问
+### 2、发起提问
+
 POST：`http://tl.6hmall.cn/api/v1/ask/questions/create`
+
 入参说明
 
 | 参数名        | 类型   |  说明  |备注|
@@ -62,6 +65,7 @@ POST：`http://tl.6hmall.cn/api/v1/ask/questions/create`
 | answer_id		      | string   |   回答者ID     ||
 | img		      | string   |   图片URL     ||
 | price				      | string   |   悬赏分数金额     |  |
+
 返回
 
 ```
@@ -74,8 +78,9 @@ POST：`http://tl.6hmall.cn/api/v1/ask/questions/create`
 }
 ```
 
-3、查看提问详情
+### 3、查看提问详情
 GET：`http://tl.6hmall.cn/api/v1/ask/questions/2`
+
 入参说明
 
 | 参数名        | 类型   |  说明  |备注|
@@ -138,8 +143,9 @@ GET：`http://tl.6hmall.cn/api/v1/ask/questions/2`
 }
 ```
 
-4、回答问题（如果指定谁回答，那么别人是回答不了的）
+### 4、回答问题（如果指定谁回答，那么别人是回答不了的）
 POST：`http://tl.6hmall.cn/api/v1/ask/answers/store`
+
 入参说明
 
 | 参数名        | 类型   |  说明  |备注|
