@@ -74,3 +74,83 @@ skill_img | string | 是 | 无 | 专业性证明 | 认证的图片URL，需先�
 
 
 ```
+
+#### 我的提问列表
+
+（Get）:
+
+```
+/api/profile/questions?access-token={access-token}&page=1
+```
+
+返回
+
+```
+{
+    "code": 200,
+    "message": "获取成功",
+[
+        {
+            "id": "10",
+            "merchant_id": "0",
+            "member_id": "1",
+            "category_id": "1",
+            "title": "天天喝酒11",
+            "description": "天天喝酒的描述",
+            "img": "http://localhost/attachment/images/2020/04/25/image_1587806389_QwTStjlc.jpg",
+            "price": "10",
+            "hide": "0",
+            "answers": "0",
+            "views": "0",
+            "followers": "0",
+            "collections": "0",
+            "comments": "0",
+            "status": "0",
+            "ip": "115.219.135.131",
+            "created_at": "1588174822",
+            "updated_at": "1588174822"
+        },
+        {
+            "id": "9",
+            "merchant_id": "0",
+            "member_id": "1",
+            "category_id": "1",
+            "title": "天天喝酒11",
+            "description": "天天喝酒的描述",
+            "img": "http://localhost/attachment/images/2020/04/25/image_1587806389_QwTStjlc.jpg",
+            "price": "10",
+            "hide": "0",
+            "answers": "0",
+            "views": "0",
+            "followers": "0",
+            "collections": "0",
+            "comments": "0",
+            "status": "0",
+            "ip": "115.219.135.131",
+            "created_at": "1588174821",
+            "updated_at": "1588174821"
+        },
+        {
+            "id": "8",
+            "merchant_id": "0",
+            "member_id": "1",
+            "category_id": "1",
+            "title": "天天喝酒11",
+            "description": "天天喝酒的描述",
+            "img": "http://localhost/attachment/images/2020/04/25/image_1587806389_QwTStjlc.jpg",
+            "price": "10",
+            "hide": "0",
+            "answers": "0",
+            "views": "0",
+                       "collections": "0",
+            "comments": "0",
+            "status": "0",
+            "ip": "115.219.135.131",
+            "created_at": "1588174371",
+            "updated_at": "1588174371"
+        }
+    ],
+    "timestamp": 1588491456
+}
+
+```
