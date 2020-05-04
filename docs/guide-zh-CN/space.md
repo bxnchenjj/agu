@@ -154,3 +154,15 @@ skill_img | string | 是 | 无 | 专业性证明 | 认证的图片URL，需先�
 }
 
 ```
+#### 我的回答列表
+
+（Get）:
+
+```
+/api/profile/answers?access-token={access-token}&page=1
+```
+
+返回
+
+```
+```
