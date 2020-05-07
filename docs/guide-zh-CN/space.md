@@ -59,7 +59,7 @@
 title | string | 是 | 无 |  身份职业| 
 description | string | 是 | 无 | 自我介绍
 skill | string | 是 | 无 | 认证领域 | 
-skill_img | string | 是 | 无 | 专业性证明 | 认证的图片URL，需先上传
+skill_image | string | 是 | 无 | 专业性证明 | 认证的图片URL，需先上传
 
 返回
 
