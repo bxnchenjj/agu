@@ -5,7 +5,7 @@
 - 发起提问
 - 查看提问详情
 - 回答问题
-
+- 根据提问ID取得回答问题列表
 
 ### 1、提问列表(公用)
 
@@ -164,4 +164,69 @@ POST：`http://tl.6hmall.cn/api/v1/ask/answers/store`
 
 
 ```
+###  5、根据提问ID取得回答问题列表
+
+GET：`http://tl.6hmall.cn/api/v1/ask/question/2`
+
+返回
+
+```
+{
+    "code": 200,
+    "message": "创建成功",
+    "data": [
+         {
+            "id": "11",
+            "merchant_id": "0",
+            "question_title": "天天喝酒",
+            "question_id": "2",
+            "member_id": "1",
+            "content": "天天喝不好",
+            "supports": "0",
+            "oppositions": "0",
+            "comments": "0",
+            "status": "0",
+            "adopted_at": null,
+            "created_at": "1588409381",
+            "updated_at": "1588409381",
+            "member": {
+                "id": "1",
+                "nickname": "hahaha",
+                "head_portrait": "http://localhost/attachment/images/2020/05/01/image_1588310505_J6E6b60u.jpg",
+                "gender": "0",
+                "self": 1
+            }
+        },  
+        
+        {
+            "id": "1",
+            "merchant_id": "0",
+            "question_title": "天天喝酒",
+            "question_id": "2",
+            "member_id": "2",
+            "content": "天天喝不好",
+            "supports": "0",
+            "oppositions": "0",
+            "comments": "0",
+            "status": "1",
+            "adopted_at": null,
+            "created_at": "1588255643",
+            "updated_at": "1588255643",
+            "member": {
+                "id": "2",
+                "nickname": "",
+                "head_portrait": "",
+                "gender": "0",
+                "self": 0
+            }
+        }        
+        
+    
+    ],
+    "timestamp": 1588409381
+}
+
+
+```
+
 
