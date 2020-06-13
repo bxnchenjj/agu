@@ -4,3 +4,5 @@
 [个人中心](docs/guide-zh-CN/space.md)
 [问答API](docs/guide-zh-CN/tlapi.md)
 
+V2
+[common](v2docs/guide-zh-CN/common.md)
