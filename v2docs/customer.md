@@ -10,7 +10,7 @@
 请求地址(Post)
 
 ```
-/v1/site/logout?access-token={access-token}
+/v2/customer/account/logout?access-token={access-token}
 ```
 
 参数
