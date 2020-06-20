@@ -12,26 +12,125 @@ touTiao | 头条小程序
 
 > 注意：如果是商户 api 的需要安装商户插件，并创建用户信息进行登录
 
-## 登录相关
+## 首页相关（不用access-token）
 
 
 目录
 
+- 读取塔罗师列表
 - 通过用户名登录
 - 通过手机号验证码快捷登录
 - 重置令牌
-- 修改个人资料
 - 注册
 - 重置密码
 - 退出登录
 
+### 读取塔罗师列表
+请求地址(Get)
+```
+/v2/common/tarot
+```
+参数
+
+参数名 | 参数类型 | 必填 | 默认 | 说明 | 备注
+---|---|---|---|---|---
+type | string| 否 | 无 | 类型 | all(默认：综合)|review(好评)|accurate(准确)|price(价格)
+
+返回
+
+```
+
+{
+    "code": 200,
+    "message": "OK",
+    "data": [
+        {
+            "id": "3",
+            "merchant_id": "0",
+            "category_id": "1",
+            "title": "SS见",
+            "description": "<p>SS见跳舞厉害</p>",
+            "skill": "23323",
+            "skill_image": "https://forest111.oss-cn-hangzhou.aliyuncs.com/tarot/pai/baojian10.jpg",
+            "status": "1",
+            "failed_reason": "",
+            "position": "7",
+            "ip": "183.130.11.124",
+            "created_at": "1589029522",
+            "updated_at": "1592489731",
+            "tags": [
+                {
+                    "id": "2",
+                    "merchant_id": "0",
+                    "title": "事业",
+                    "sort": "2",
+                    "status": "1",
+                    "created_at": "1592447257",
+                    "updated_at": "1592484935"
+                },
+                {
+                    "id": "4",
+                    "merchant_id": "0",
+                    "title": "财运",
+                    "sort": "4",
+                    "status": "1",
+                    "created_at": "1592484893",
+                    "updated_at": "1592484900"
+                }
+            ],
+            "userinfo": {
+                "id": "3",
+                "nickname": "",
+                "head_portrait": "",
+                "gender": "0"
+            }
+        },
+        {
+            "id": "1",
+            "merchant_id": "0",
+            "category_id": "1",
+            "title": "asdf",
+            "description": "<p>asf</p>",
+            "skill": "塔罗的`ASD",
+            "skill_image": "asdfasdfasf",
+            "status": "1",
+            "failed_reason": "",
+            "position": "1",
+            "ip": "183.130.11.124",
+            "created_at": "1588855905",
+            "updated_at": "1592489842",
+            "tags": [
+                {
+                    "id": "2",
+                    "merchant_id": "0",
+                    "title": "事业",
+                    "sort": "2",
+                    "status": "1",
+                    "created_at": "1592447257",
+                    "updated_at": "1592484935"
+                }
+            ],
+            "userinfo": {
+                "id": "1",
+                "nickname": "hahaha",
+                "head_portrait": "http://tl.6hmall.cn/attachment/images/2020/05/01/image_1588310505_J6E6b60u.jpg",
+                "gender": "0"
+            }
+        }
+    ],
+    "timestamp": 1592614076
+}
+
+
+
+```
 
 ### 通过用户名登录
 
 请求地址(Post)
 
 ```
-/v1/site/login
+/v2/common/account/login
 ```
 
 参数
@@ -91,7 +190,7 @@ password | string| 是 | 无 | 密码 |
 请求地址(Post)
 
 ```
-/v1/site/mobile-login
+/v2/common/account/mobile-login
 ```
 
 参数
@@ -151,7 +250,7 @@ code | string| 是 | 无 | 短信验证码 |
 请求地址(Post)
 
 ```
-/v1/site/refresh
+/v2/common/account/refresh
 ```
 
 参数
@@ -204,91 +303,13 @@ group | string| 是 | 无 | 组别 |
         }
     }
 }
-```
-### 修改个人资料
 
-请求地址(Post)
-
-```
-/v1/site/up-userinfo
-```
-
-参数
-
-参数名 | 参数类型 | 必填 | 默认 | 说明 | 备注
----|---|---|---|---|---
-nickname | string| 是 | 无 | 昵称 |
-head_portrait | string| 否 | 无 | 头像URL | 
-realname | string| 否 | 无 | 真实姓名 | 
-返回
-
-```
-{
-    "code": 200,
-    "message": "OK",
-    "data": {
-        "refresh_token": "ZQqIzE91lZsOsiBZUzX_HRvH_er71IA3_1527339061",
-        "access_token": "y7ch3kQtRq7dEkqf6le2LOyRNOB_xzQV_1527339061",
-        "expiration_time": 7200,
-        "member": {
-            "id": 1,
-            "merchant_id": 0,
-            "username": "test",
-            "type": 1,
-            "nickname": "简言",
-            "realname": null,
-            "head_portrait": null,
-            "current_level": 1,
-            "gender": 0,
-            "qq": "",
-            "email": "",
-            "birthday": null,
-            "visit_count": 37,
-            "home_phone": "",
-            "mobile": "",
-            "role": 10,
-            "last_time": 1588466624,
-            "last_ip": "183.130.26.183",
-            "province_id": 0,
-            "city_id": 0,
-            "area_id": 0,
-            "pid": 0,
-            "level": 1,
-            "tree": "tr_0 ",
-            "promo_code": "",
-            "status": 1,
-            "created_at": 1587800350,
-            "updated_at": 1588466624,
-            "status": 1,
-            "append": 1511169880,
-            "updated": 1527339061,
-            "account": {
-                "id": 1,
-                "merchant_id": 0,
-                "member_id": 1,
-                "level": -1,
-                "user_money": "0.00",
-                "accumulate_money": "0.00",
-                "give_money": "0.00",
-                "consume_money": "0.00",
-                "frozen_money": "0.00",
-                "user_integral": 0,
-                "accumulate_integral": 0,
-                "give_integral": 0,
-                "consume_integral": "0.00",
-                "frozen_integral": 0,
-                "status": 1
-            }
-        }
-    }
-}
-```
 ### 注册
 
 请求地址(Post)
 
 ```
-/v1/site/register
+/v2/common/account/register
 ```
 
 参数
@@ -352,7 +373,7 @@ group | string| 是 | 无 | 组别 |
 请求地址(Post)
 
 ```
-/v1/site/up-pwd
+/v2/common/account/up-pwd
 ```
 
 参数
@@ -415,7 +436,7 @@ group | string| 是 | 无 | 组别 |
 请求地址(Post)
 
 ```
-/v1/site/logout?access-token={access-token}
+/v2/common/account/logout?access-token={access-token}
 ```
 
 参数
