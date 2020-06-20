@@ -16,7 +16,7 @@ touTiao | 头条小程序
 
 
 目录
-
+- 读取广告列表
 - 读取塔罗师列表
 - 通过用户名登录
 - 通过手机号验证码快捷登录
@@ -24,6 +24,44 @@ touTiao | 头条小程序
 - 注册
 - 重置密码
 - 退出登录
+### 读取广告列表
+请求地址(Get)
+```
+/v2/common/adv
+```
+参数
+
+参数名 | 参数类型 | 必填 | 默认 | 说明 | 备注
+---|---|---|---|---|---
+location_id | string| 否 | 无 | 类型 |默认1
+
+返回
+
+```
+{
+    "code": 200,
+    "message": "OK",
+    "data": [
+        {
+            "id": "2",
+            "merchant_id": "0",
+            "title": "我在画毛毛虫1",
+            "cover": "https://tl.6hmall.cn/attachment/images/2020/06/19/image_1592556429_aK15vVZ5.png",
+            "location_id": "2",
+            "silder_text": "",
+            "start_time": "1592619653",
+            "end_time": "1593134700",
+            "jump_link": "",
+            "jump_type": "1",
+            "sort": "0",
+            "status": "1",
+            "created_at": "1592619669",
+            "updated_at": "1592619669"
+        }
+    ],
+    "timestamp": 1592620230
+}
+```
 
 ### 读取塔罗师列表
 请求地址(Get)
@@ -34,12 +72,11 @@ touTiao | 头条小程序
 
 参数名 | 参数类型 | 必填 | 默认 | 说明 | 备注
 ---|---|---|---|---|---
-type | string| 否 | 无 | 类型 | all(默认：综合)|review(好评)|accurate(准确)|price(价格)
+type | string| 否 | 无 | 类型 | all(默认：综合)、review(好评)、accurate(准确)、price(价格)
 
 返回
 
 ```
-
 {
     "code": 200,
     "message": "OK",
