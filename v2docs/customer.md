@@ -1,5 +1,5 @@
 
-[个人中心](v2docs/profile.md)
+[个人中心](profile.md)
 
 
 ## 
