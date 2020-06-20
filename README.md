@@ -6,4 +6,4 @@
 
 V2
 [common](v2docs/common.md)
-[customer](v2docs/guide-zh-CN/customer.md)
+[customer](v2docs/customer.md)
