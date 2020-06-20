@@ -5,5 +5,5 @@
 [问答API](docs/guide-zh-CN/tlapi.md)
 
 V2
-[common](v2docs/guide-zh-CN/common.md)
+[common](v2docs/common.md)
 [customer](v2docs/guide-zh-CN/customer.md)
